@@ -1,0 +1,79 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: url("unilavras.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(18, 6, 77);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.cards {
+    position: absolute;
+    margin-left: -25%;
+    top: 50px;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #FFF;
+    padding: 20px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #29322c;
+}
+
+.contadorGarrafasColetadas {
+    float: right;
+    font-size: 25px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    margin: 10px;
+    display: none;
+}
+
+.lixeira {
+    width: 90px;
+    height: 90px;
+    /*background-color: gold;*/
+    background-image: url("lixeira-plastico.png");
+    position: absolute;
+    display: none;
+}
+
+.garrafa {
+    width: 29px;
+    height: 60px;
+    background-image: url("garrafa-plastico.png");
+    position: absolute;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.moeda, .colisao {
+    position: absolute; 
+    animation: trofeu-desaparece 0s 2s both;
+}
+
+@keyframes trofeu-desaparece {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

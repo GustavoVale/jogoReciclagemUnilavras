@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="myFunction()">Aperte</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        let text;
+        let person = prompt("Digite seu nome:", "Joao Jose");
+        if (person == null || person == "") {
+          text = "Usuario cancelou o prompt.";
+        } else { 
+          text = "Oi " + person + "! Como voce esta?";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
